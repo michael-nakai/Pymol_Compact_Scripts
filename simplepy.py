@@ -5,13 +5,13 @@ iternum = 0
 def pubimage(*argumenthere, **kwd):
 	'''Takes an image with the specified properties. The properties should be entered in the following order:
 	
-	ray_trace_mode, antialias, ray number 1, ray number 2, bg_color
+	ray_trace_mode, antialias, ray width, ray height, bg_color
 			
 	
 	If not specified, then the properties default to
 			ray_trace_mode (int 1-3) 	-->	 	3
 			antialias (int 0-2)			--> 	2
-			ray num1, raynum2 (int) 	--> 	ray 1200, 1200
+			raynum1, raynum2 (int)	 	--> 	1200, 1200
 			bg_color (string) 			--> 	white
 	'''
 	
@@ -49,22 +49,22 @@ def pubimage(*argumenthere, **kwd):
 	
 	#Save the Image
 	try:
-		cmd.png('image' + iternum + '.png')
+		cmd.png('image' + str(iternum) + '.png')
 	except IndexError:
-		cmd.png('image' + iternum + '.png')
+		cmd.png('image' + str(iternum) + '.png')
 
 	iternum += 1
 
 def pubimage_tmblr(*argumenthere, **kwd):
 	'''Takes an image with the specified properties. The properties should be entered in the following order:
 	
-	ray_trace_mode, antialias, ray number 1, ray number 2, bg_color
+	ray_trace_mode, antialias, ray width, ray height, bg_color
 			
 	
 	If not specified, then the properties default to
 			ray_trace_mode (int 1-3) 	-->	 	3
 			antialias (int 0-2)			--> 	2
-			ray num1, raynum2 (int) 	--> 	ray 1200, 1200
+			raynum1, raynum2 (int)	 	--> 	ray 1200, 1200
 			bg_color (string) 			--> 	white
 	'''
 	
@@ -103,9 +103,9 @@ def pubimage_tmblr(*argumenthere, **kwd):
 	
 	#Save the Image
 	try:
-		cmd.png('molecule' + iternum + 'center.png')
+		cmd.png('molecule' + str(iternum) + 'center.png')
 	except IndexError:
-		cmd.png('molecule' + iternum + 'center.png')
+		cmd.png('molecule' + str(iternum) + 'center.png')
 	
 	cmd.turn('x', 90.0)
 	
@@ -118,9 +118,9 @@ def pubimage_tmblr(*argumenthere, **kwd):
 
 	#Save the Image
 	try:
-		cmd.png('molecule' + iternum + 'topdown.png')
+		cmd.png('molecule' + str(iternum) + 'topdown.png')
 	except IndexError:
-		cmd.png('molecule' + iternum + 'topdown.png')
+		cmd.png('molecule' + str(iternum) + 'topdown.png')
 
 	cmd.turn('x', -180.0)
 	
@@ -133,9 +133,9 @@ def pubimage_tmblr(*argumenthere, **kwd):
 
 	#Save the Image
 	try:
-		cmd.png('molecule' + iternum + 'bottomup.png')
+		cmd.png('molecule' + str(iternum) + 'bottomup.png')
 	except IndexError:
-		cmd.png('molecule' + iternum + 'bottomup.png')
+		cmd.png('molecule' + str(iternum) + 'bottomup.png')
 
 	cmd.turn('x', 90.0)
 	cmd.turn('y', 90.0)
@@ -149,9 +149,9 @@ def pubimage_tmblr(*argumenthere, **kwd):
 
 	#Save the Image
 	try:
-		cmd.png('molecule' + iternum + 'left.png')
+		cmd.png('molecule' + str(iternum) + 'left.png')
 	except IndexError:
-		cmd.png('molecule' + iternum + 'left.png')
+		cmd.png('molecule' + str(iternum) + 'left.png')
 	
 	cmd.turn('y', -180.0)
 	
@@ -164,9 +164,9 @@ def pubimage_tmblr(*argumenthere, **kwd):
 
 	#Save the Image
 	try:
-		cmd.png('molecule' + iternum + 'right.png')
+		cmd.png('molecule' + str(iternum) + 'right.png')
 	except IndexError:
-		cmd.png('molecule' + iternum + 'right.png')
+		cmd.png('molecule' + str(iternum) + 'right.png')
 
 	cmd.turn('y', 90.0)
 	iternum += 1
